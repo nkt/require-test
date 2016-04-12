@@ -47,8 +47,12 @@
 	const btn = document.querySelector('button');
 
 	function testRequire() {
+	  console.time('testRequire');
+
 	  const { head } = __webpack_require__(1);
 	  head([1, 2, 3]);
+
+	  console.timeEnd('testRequire');
 	}
 
 	btn.addEventListener('click', () => {
